@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+    <head>
+    	<meta charset="utf-8">
+        <title>Automoviles</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/p1.css">        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+    <div id="contenedor" class="container-fluid">
+
+        <div id="banner" class="jumbotron">
+            <h1>Sistema de Autos</h1>
+            <img class="img-responsive" src="media/logo.jpeg" style="height: 100px;" />
+        </div>
+
+        <div id="navcontainer">
+            <ul id="globalnav">
+                <li><a href="altas.html">Altas</a></li>
+                <li><a href="bajas.php">Bajas</a></li>
+                <li><a href="cambios.php">Cambios</a></li>
+                <li><a href="buscar.html">Buscar</a></li>
+                <li><a href="reportes.php">Reportes</a></li>
+            </ul>
+        </div>
+        
+        <div id="altas" > 
+            <h2>Alta de autos</h2>
+            <div class="body row">
+
+            <form action="altas.php" method="POST">
+
+            	<div class="col-md-6"> 
+            	Placas:<input type="text" name="placas" class="form-control"><br/>
+            	Precio<input type="number" name="precio" min="0" class="form-control"><br/>
+            	Marca:<input type="text" name="marca" class="form-control"><br/>
+            	Modelo:<input type="text" name="modelo" class="form-control"><br/>
+            	Version:<input type="text" name="version" class="form-control"><br/>
+            	Tipo:<input type="text" name="tipo" class="form-control"><br/>
+            	Año:<input type="number" name="ano" min="1900" max="2018" class="form-control"><br/>
+				</div>
+
+				<div class="col-md-6"> 
+            	Kilometraje:<input type="number" name="kilometraje" min="0" class="form-control"><br/>
+            	Num cilindros:<input type="number" name="cilindros" min="1" max="16" class="form-control"><br/>
+            	HP: <input type="number" name="hp" min="1" max="2000" class="form-control"><br/>
+            	Color interior:<br/><input type="color" name="colorInt"><br/>
+            	Color exterior:<br/><input type="color" name="colorExt"><br/>
+            	Transmision: <select name="transmision" class="form-control">
+            		<option>Automatico</option>
+            		<option>Manual</option>
+            	</select><br/>
+            	Combustible: <select name="combustible" class="form-control">
+            		<option>Gasolina</option>
+            		<option>Diesel</option>
+            	</select><br/>
+            	AC: <select name="ac" class="form-control">
+            		<option>Si</option>
+            		<option>No</option>
+            	</select>
+                <br> 
+                <input type="submit" name="Enviar" class="button btn btn-success">
+            	</div>
+
+            </form>
+
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Automoviles</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/p1.css">        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+    <div id="contenedor" class="container-fluid">
+
+        <div id="banner" class="jumbotron">
+            <h1>Sistema de Autos</h1>
+            <img class="img-responsive" src="media/logo.jpeg" style="height: 100px;" />
+        </div>
+
+        <div id="navcontainer">
+            <ul id="globalnav">
+                <li><a href="altas.html">Altas</a></li>
+                <li><a href="bajas.php">Bajas</a></li>
+                <li><a href="cambios.php">Cambios</a></li>
+                <li><a href="buscar.html">Buscar</a></li>
+                <li><a href="reportes.php">Reportes</a></li>
+            </ul>
+        </div>
+        
+        <div id="buscar">
+            <h2>Consulta de autos</h2>
+            Selecciona un campo para buscar:<br />
+            <form action="buscar.php" method="POST">
+				<select name="campoBusqueda">
+					<option value="placas">Placas</option>
+					<option value="precio">Precio</option>
+					<option value="marca">Marca</option>
+					<option value="modelo">Modelo</option>
+					<option value="version">Version</option>
+					<option value="tipo">Tipo</option>
+					<option value="ano">Año</option>
+					<option value="kilometraje">Kilometraje</option>
+					<option value="cilindros">Cilindros</option>
+					<option value="hp">HP</option>
+					<option value="colorInt">Color Interior</option>
+					<option value="colorExt">Color Exterior</option>
+					<option value="transmision">Transmision</option>
+					<option value="combustible">Combustible</option>
+					<option value="ac">AC</option>
+				</select>
+				<input type="text" maxlength="40" name="textoBusqueda"/><br>
+				<input type="submit" class="button" value="HACER BUSQUEDA">
+            </form>
+        </div>
+
+    </div>
+    </body>
+</html>
